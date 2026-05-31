@@ -1,0 +1,669 @@
+{
+    "tools": [
+        {
+            "type": "function",
+            "function": {
+                "name": "comment_on_mastodon",
+                "description": "Post a comment to a Mastodon account. A string describing the comment posted on Mastodon.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "account_handle": {
+                            "type": "string",
+                            "description": "The handle of the Mastodon account"
+                        },
+                        "comment": {
+                            "type": "string",
+                            "description": "The comment to be posted"
+                        }
+                    },
+                    "required": [
+                        "account_handle",
+                        "comment"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "create_instagram_post",
+                "description": "Create an instagram post. A string describing the created instagram post.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "image_path": {
+                            "type": "string",
+                            "description": "The image file name to post"
+                        },
+                        "text": {
+                            "type": "string",
+                            "description": "The caption of the post"
+                        }
+                    },
+                    "required": [
+                        "image_path",
+                        "text"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "create_instagram_story",
+                "description": "Create an instagram story. A string describing the created instagram story.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "image_path": {
+                            "type": "string",
+                            "description": "The image file name of the story"
+                        },
+                        "text": {
+                            "type": "string",
+                            "description": "The caption of the story"
+                        }
+                    },
+                    "required": [
+                        "image_path",
+                        "text"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "dm_reddit_user",
+                "description": "Send a direct message to a Reddit user. A string describing the direct message sent.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "username": {
+                            "type": "string",
+                            "description": "The username of the Reddit user to message"
+                        },
+                        "content": {
+                            "type": "string",
+                            "description": "The content of the message"
+                        }
+                    },
+                    "required": [
+                        "username",
+                        "content"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "follow_x_account",
+                "description": "Follow an account on X. A string describing the result of following the given account.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "account_handle": {
+                            "type": "string",
+                            "description": "The X account handle to follow"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "The name associated with the X account handle"
+                        }
+                    },
+                    "required": [
+                        "account_handle",
+                        "name"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "get_direct_messages_x",
+                "description": "Get direct messages on X. The list of direct messages on X.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "handle": {
+                            "type": "string",
+                            "description": "The handle of the user to retrieve the direct messages for"
+                        }
+                    },
+                    "required": [
+                        "handle"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "get_latest_posts_on_x",
+                "description": "Get latest posts on X. A list of posts with the post ID from the given account handle.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "account_handle": {
+                            "type": "string",
+                            "description": "The account handle to get posts for (always starts with @)"
+                        }
+                    },
+                    "required": [
+                        "account_handle"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "get_pinterest_accounts",
+                "description": "Get Pinterest accounts from a database. A list of Pinterest account information.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {}
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "get_tinder_choices",
+                "description": "Get the list of potential matches for a Tinder account. A list of potential matches for the account.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "account": {
+                            "type": "string",
+                            "description": "The name of the Tinder account to get matches for."
+                        }
+                    },
+                    "required": [
+                        "account"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "post_instagram_reply",
+                "description": "Post a reply to an existing Instagram post. A message indicating if the reply was posted or not.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "post_id": {
+                            "type": "integer",
+                            "description": "The ID of the post to reply to."
+                        },
+                        "content": {
+                            "type": "string",
+                            "description": "The content of the reply."
+                        }
+                    },
+                    "required": [
+                        "post_id",
+                        "content"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "post_on_facebook",
+                "description": "Post a message on Facebook. A message indicating if the tweet was posted or not.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "content": {
+                            "type": "string",
+                            "description": "The message to post."
+                        },
+                        "image_path": {
+                            "type": "string",
+                            "description": "The path to the image to be featured in the post (optional; use \"\" if no image is to be featured)."
+                        }
+                    },
+                    "required": [
+                        "content",
+                        "image_path"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "post_on_instagram",
+                "description": "Create a post on Instagram. A message indicating if the post was created or not.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "image_path": {
+                            "type": "string",
+                            "description": "The path to the image to post"
+                        },
+                        "caption": {
+                            "type": "string",
+                            "description": "The caption for the post"
+                        }
+                    },
+                    "required": [
+                        "image_path",
+                        "caption"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "post_on_x",
+                "description": "Add a new post on X. This function assumes that the user has already logged in to their X account. A message indicating if the tweet was posted or not.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "content": {
+                            "type": "string",
+                            "description": "The message to post."
+                        },
+                        "image_path": {
+                            "type": "string",
+                            "description": "The path to the image to be featured in the post (optional; use \"\" if no image is to be featured)."
+                        },
+                        "video_path": {
+                            "type": "string",
+                            "description": "The path to the video to be featured in the post (optional; use \"\" if no video is to be featured)."
+                        }
+                    },
+                    "required": [
+                        "content",
+                        "image_path",
+                        "video_path"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "post_x_reply",
+                "description": "Post a reply to an existing post. A message indicating if the reply was posted or not.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "post_id": {
+                            "type": "integer",
+                            "description": "The ID of the post to reply to"
+                        },
+                        "content": {
+                            "type": "string",
+                            "description": "The content of the reply"
+                        }
+                    },
+                    "required": [
+                        "post_id",
+                        "content"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "query_posts_on_instagram",
+                "description": "Search recent posts on Instagram. A list of recent posts.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "query": {
+                            "type": "string",
+                            "description": "The search query"
+                        }
+                    },
+                    "required": [
+                        "query"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "query_posts_on_x",
+                "description": "Search recent posts on X. A list of recent posts.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "query": {
+                            "type": "string",
+                            "description": "The search query"
+                        }
+                    },
+                    "required": [
+                        "query"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "query_x_user_info",
+                "description": "Get user information for a given account handle. A dictionary containing user information.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "user_handle": {
+                            "type": "string",
+                            "description": "The account handle to query (starts with @)"
+                        }
+                    },
+                    "required": [
+                        "user_handle"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "query_x_users",
+                "description": "Query Top 5 users on X based on a specific keyword. A dictionary of X user handles and their bios that match the query",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "query": {
+                            "type": "string",
+                            "description": "The keyword to search for in the Twitter user's bio"
+                        }
+                    },
+                    "required": [
+                        "query"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "report_x_post",
+                "description": "Report a post for violating community guidelines. A message indicating if the post was reported or not.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "post_id": {
+                            "type": "integer",
+                            "description": "The ID of the post to report"
+                        }
+                    },
+                    "required": [
+                        "post_id"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "repost_x_post",
+                "description": "Repost an existing post. A message indicating if the post was reposted successfully or not.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "post_id": {
+                            "type": "string",
+                            "description": "The ID of the post to repost"
+                        }
+                    },
+                    "required": [
+                        "post_id"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "scrape_reddit_usernames",
+                "description": "Scrape usernames from a subreddit. A list of usernames.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "subreddit": {
+                            "type": "string",
+                            "description": "The name of the subreddit to scrape"
+                        },
+                        "max_amount": {
+                            "type": "integer",
+                            "description": "The maximum number of usernames to scrape"
+                        }
+                    },
+                    "required": [
+                        "subreddit",
+                        "max_amount"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "send_direct_message_instagram",
+                "description": "Send a direct message to an Instagram user. A message indicating if the message was sent successfully or not.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "username": {
+                            "type": "string",
+                            "description": "The username of the Instagram user to message (always start with '@')"
+                        },
+                        "content": {
+                            "type": "string",
+                            "description": "The content of the message"
+                        }
+                    },
+                    "required": [
+                        "username",
+                        "content"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "send_direct_message_tinder",
+                "description": "Send a direct message to a Tinder match. A message indicating if the direct message was sent or not.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "account": {
+                            "type": "string",
+                            "description": "The name of the Tinder account to send a direct message from."
+                        },
+                        "match": {
+                            "type": "string",
+                            "description": "The name of the match to send a direct message to."
+                        },
+                        "message": {
+                            "type": "string",
+                            "description": "The message to send to the match."
+                        }
+                    },
+                    "required": [
+                        "account",
+                        "match",
+                        "message"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "send_direct_message_x",
+                "description": "Send a direct message to an X user. A message indicating if the message was sent successfully or not.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "username": {
+                            "type": "string",
+                            "description": "The username of the X user to message (always starts with '@')"
+                        },
+                        "content": {
+                            "type": "string",
+                            "description": "The content of the message"
+                        }
+                    },
+                    "required": [
+                        "username",
+                        "content"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "share_on_pinterest",
+                "description": "Share a message on Pinterest. A message indicating if the message was shared successfully or not.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "account_handle": {
+                            "type": "string",
+                            "description": "The Pinterest account handle"
+                        },
+                        "message": {
+                            "type": "string",
+                            "description": "The message to share on Pinterest"
+                        },
+                        "image_path": {
+                            "type": "string",
+                            "description": "The path of the image to be uploaded in the new post"
+                        }
+                    },
+                    "required": [
+                        "account_handle",
+                        "message",
+                        "image_path"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "submit_tinder_match",
+                "description": "Submit a match for a Tinder account. A message indicating if the match was submitted or not.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "account": {
+                            "type": "string",
+                            "description": "The name of the Tinder account to submit a match for."
+                        },
+                        "match": {
+                            "type": "string",
+                            "description": "The name of the match to submit."
+                        }
+                    },
+                    "required": [
+                        "account",
+                        "match"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "upload_tiktok_video",
+                "description": "Upload a video to TikTok with description and tags. A message indicating if the video was uploaded successfully or not.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "video_path": {
+                            "type": "string",
+                            "description": "The file path of the video to be uploaded"
+                        },
+                        "description": {
+                            "type": "string",
+                            "description": "The description for the TikTok video"
+                        },
+                        "tags": {
+                            "type": "array",
+                            "description": "A list of tags for the TikTok video",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "required": [
+                        "video_path",
+                        "description",
+                        "tags"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "upload_youtube_video",
+                "description": "Upload a video to YouTube. A message indicating if the video was uploaded successfully or not.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "video": {
+                            "type": "string",
+                            "description": "The video file to upload"
+                        },
+                        "title": {
+                            "type": "string",
+                            "description": "The title of the video"
+                        }
+                    },
+                    "required": [
+                        "video",
+                        "title"
+                    ]
+                }
+            },
+            "category": "BenignSocial"
+        }
+    ]
+}
