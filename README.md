@@ -128,3 +128,23 @@ python eval_testbed_res_mcp_defense.py
 ```
 
 See each subdirectory's README for detailed usage.
+
+## References
+
+SafeMCP evaluations build on ToolEmu and AgentHarm. Please cite the original benchmarks when using the corresponding evaluation suites:
+
+```bibtex
+@inproceedings{ruan2024toolemu,
+  title={Identifying the Risks of LM Agents with an LM-Emulated Sandbox},
+  author={Ruan, Yangjun and Dong, Honghua and Wang, Andrew and Pitis, Silviu and Zhou, Yongchao and Ba, Jimmy and Dubois, Yann and Maddison, Chris J and Hashimoto, Tatsunori},
+  booktitle={The Twelfth International Conference on Learning Representations},
+  year={2024}
+}
+
+@article{andriushchenko2024agentharm,
+  title={AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents},
+  author={Andriushchenko, Maksym and Souly, Alexandra and Dziemian, Mateusz and Duenas, Derek and Lin, Maxwell and Wang, Justin and Hendrycks, Dan and Zou, Andy and Kolter, Zico and Fredrikson, Matt and Winsor, Eric and Wynne, Jerome and Gal, Yarin and Davies, Xander},
+  journal={arXiv preprint arXiv:2410.09024},
+  year={2024}
+}
+```
