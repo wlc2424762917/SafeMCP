@@ -1,6 +1,6 @@
 # SafeMCP: Proactive Power Regulation for LLM Agent Defense
 
-This repository contains the training and evaluation code for **SafeMCP**, a server-side defense plugin that constrains tool acquisition via predictive reasoning regarding future safety risks.
+This repository contains the official code for the paper **SafeMCP: Proactive Power Regulation for LLM Agent Defense via Environment-Grounded Look-Ahead Reasoning**. It includes the training and evaluation code for **SafeMCP**, a server-side defense plugin that constrains tool acquisition via predictive reasoning regarding future safety risks.
 
 ## Environment Setup
 
@@ -146,5 +146,15 @@ SafeMCP evaluations build on ToolEmu and AgentHarm. Please cite the original ben
   author={Andriushchenko, Maksym and Souly, Alexandra and Dziemian, Mateusz and Duenas, Derek and Lin, Maxwell and Wang, Justin and Hendrycks, Dan and Zou, Andy and Kolter, Zico and Fredrikson, Matt and Winsor, Eric and Wynne, Jerome and Gal, Yarin and Davies, Xander},
   journal={arXiv preprint arXiv:2410.09024},
   year={2024}
+}
+
+@misc{wang2026safemcpproactivepowerregulation,
+      title={SafeMCP: Proactive Power Regulation for LLM Agent Defense via Environment-Grounded Look-Ahead Reasoning}, 
+      author={Lichao Wang and Zhaoxing Ren and Tianzhuo Yang and Jiaming Ji and Chi Harold Liu and Yaodong Yang and Juntao Dai},
+      year={2026},
+      eprint={2606.01991},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2606.01991}, 
 }
 ```
